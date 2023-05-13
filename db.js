@@ -1,4 +1,6 @@
 import { createConnection } from "mysql2";
+// const { createConnection } = require("mysql2");
+
 
 export const db = createConnection({
  host: "localhost",

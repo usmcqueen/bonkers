@@ -43,7 +43,7 @@ export const addPost = (req, res) => {
     const postId = req.params.postId;
 
     const q =
-      "INSERT INTO posts `title`, `desc`, `img`, `cat`, `date`, `uid` VALUES (?, ?, ?, ?, ?, ?)";
+      "INSERT INTO posts title, `desc`, img, cat, `date`, uid VALUES (?, ?, ?, ?, ?, ?)";
 
       // "INSERT INTO posts,`title`, `desc`, `img`, `cat`, `date`, `uid` VALUES (?)";
 
@@ -94,7 +94,7 @@ export const updatePost = (req, res) => {
 
     const q =
 
-      "UPDATE `posts` SET `title` = ?, `desc` = ?, `img` = ?, `cat` = ? WHERE `id` = ? AND `uid` = ?";
+      "UPDATE posts SET title = ?, `desc` = ?, img = ?, cat = ? WHERE id = ? AND uid = ?";
       // "UPDATE posts SET `title`= ?, `desc`= ?,`img`= ?,`cat`= ? WHERE `id`= ? AND `uid`= ?";
 
       const values = [req.body.title, req.body.desc, req.body.img, req.body.cat, postId, userInfo.id];
